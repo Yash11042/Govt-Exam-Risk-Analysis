@@ -1,126 +1,111 @@
-#  Government Exam Risk Analysis  
-**(Applicants vs Selection Probability)**
+#  Government Exam Risk Index (India)
+<img width="742" height="409" alt="Screenshot 2025-12-28 173341" src="https://github.com/user-attachments/assets/493c73ea-2d9d-43d2-a2b9-9e68367cfb98" />
+
+<img width="628" height="405" alt="Screenshot 2025-12-28 173418" src="https://github.com/user-attachments/assets/2d997a2b-7861-42dc-a36e-84decf76cbf0" />
+
+
+###  Quantifying Career Risk Using Data Analytics & Forecasting
+
+---
 
 ##  Project Overview
-This project analyzes the **risk and competitiveness of Indian government examinations** by evaluating applicant volumes, vacancies, selection probability, preparation time, and salary outcomes. The goal is to use **data-driven insights** to understand whether long-term government exam preparation is a statistically sustainable career path.
 
-The analysis is designed to simulate **real-world analytical decision-making**, similar to how business or policy analysts evaluate risk vs reward.
+Competitive government exams in India attract **millions of applicants every year**, while seat availability grows marginally.  
+This project introduces a **Competitive Exam Risk Index** to quantify **career risk using data instead of assumptions**.
 
----
-
-##  Problem Statement
-Government exams attract **millions of candidates every year** for a limited number of vacancies. Aspirants often spend **2–3+ years** preparing, with highly uncertain outcomes.
-
-**Key questions addressed:**
-- How competitive are major government exams?
-- What is the actual probability of selection?
-- How many candidates compete for a single seat?
-- Does the time investment justify the outcome?
+The analysis evaluates:
+- Applicant pressure
+- Seat scarcity
+- Selection probability
+- Growth trends
+- Future risk outlook (forecast)
 
 ---
 
-##  Data Description
+##  Objectives
 
-### Government Exam Dataset
-The dataset includes major exams such as:
-- SSC (CGL, Phase exams)
-- Banking (IBPS PO)
-- Railways (RRB Group D, NTPC)
-- UPSC (CSE, CDS, NDA)
-- State-level police & defence exams
-
-**Key fields:**
-- Applicants
-- Vacancies
-- Selection Rate (%)
-- Applicants per Seat
-- Average Years of Preparation
-- Average Salary (LPA)
-
->  Data is compiled from publicly available recruitment notifications, reports, and secondary sources. Where exact figures were unavailable, conservative estimates were used and clearly documented.
+- Measure **competition intensity** across major Indian exams  
+- Identify **high-risk exams** using data-driven indicators  
+- Track **risk trends over time**  
+- Forecast **future applicant pressure and risk (2025–2026)**  
+- Present insights through an **interactive Power BI dashboard**
 
 ---
 
-##  Metrics & Feature Engineering
-The following analytical metrics were engineered using Python and Power BI:
+##  Risk Index Framework
 
-- **Selection Rate (%)**  
-  `Vacancies ÷ Applicants × 100`
+The **Risk Score (0–100)** is derived from the following components:
 
-- **Applicants per Seat**  
-  `Applicants ÷ Vacancies`
+| Component | Description |
+|---------|-------------|
+| Applicant Pressure Index | Applicants per available seat |
+| Selection Probability | Probability of selection |
+| Growth Acceleration | YoY growth in applicants |
+| Stability Index | Volatility in applicant numbers |
 
-- **Average Preparation Time (Years)**
-
-These metrics help quantify **risk, competition intensity, and uncertainty**.
+### Final Risk Classification
+- 🔴 High Risk: 70–100  
+- 🟠 Medium Risk: 40–69  
+- 🟢 Low Risk: 0–39  
 
 ---
 
-##  Dashboard Highlights (Power BI)
+##  Dataset Description
 
-The Power BI dashboard includes:
+### `exams_master.xlsx`
 
-###  KPI Cards
-- Average Selection Rate (%)
-- Applicants per Seat
-- Total Applicants
-- Total Vacancies
-- Average Years of Preparation
+| Column | Description |
+|------|-------------|
+| exam_id | Unique exam identifier |
+| exam_name | Name of the exam |
+| conducting_body | Organizing authority |
+| category | Exam category |
 
-###  Visual Analysis
-- Applicants vs Vacancies by Exam
-- Selection Rate by Exam (Descending)
-- Applicants per Seat by Exam
-- Average Preparation Time by Category
-- Salary Comparison across Exams
+### `exam_stats.xlsx`
 
-###  Key Insights Panel
-- Most major exams have **<1% selection probability**
-- **5,000–20,000+ candidates** compete for a single seat
-- Aspirants invest **2–3 years** with uncertain outcomes
-- High competition significantly increases career risk
+| Column | Description |
+|------|-------------|
+| exam_id | Exam identifier |
+| year | Year |
+| applicants | Number of applicants |
+| seats | Number of seats |
 
 ---
 
 ##  Tools & Technologies
-- **Python** (Pandas, NumPy) – data cleaning & feature engineering  
-- **Power BI** – interactive dashboard & storytelling  
-- **Excel** – initial data structuring  
-- **GitHub** – project documentation & version control  
+
+- Python (Pandas, NumPy, Scikit-Learn)
+- Power BI
+- Excel
+- Linear Regression (Forecasting)
 
 ---
 
-##  Key Findings
-- Government exams exhibit **extreme competition** with very low selection rates.
-- High preparation time combined with low probability increases opportunity cost.
-- Data indicates a **high-risk, low-certainty career model** when evaluated statistically.
+## 📈Dashboard Highlights
+
+- National risk overview (KPIs)
+- Risk distribution across exams
+- Exam-wise deep dive analysis
+- Category-wise comparison
+- Risk forecasting (2025–2026)
+- Early warning indicators
 
 ---
 
-##  Conclusion
-Based on probability, competition intensity, and time investment, government exam preparation represents a **high-risk career path**. A data-driven evaluation highlights the importance of exploring **alternative career options with better risk-to-reward balance**.
+##  Forecasting Approach
+
+- Linear regression applied on historical trends
+- Forecasted:
+  - Applicants
+  - Seats
+  - Derived Risk Score
+- Forecast horizon: **2025–2026**
 
 ---
 
-##  Why This Project Matters
-This project demonstrates:
-- Analytical thinking
-- Real-world data modeling
-- Metric-driven decision making
-- Clear storytelling using dashboards
+##  Key Insights
 
-It reflects how **data can be used to make informed personal and business decisions**.
-
----
-
-##  Author
-**Yash Tiwari**  
-Aspiring Data Analyst | Python | SQL | Power BI  
-
----
-
-##  Dashboard Preview
-
-
-<img width="668" height="364" alt="Screenshot 2025-12-24 121717" src="https://github.com/user-attachments/assets/81920f9a-d729-4909-b093-fa71d9c9e6af" />
-
+- Some exams remain **high risk despite seat expansion**
+- Applicant growth consistently outpaces seat growth
+- Banking and civil service exams show **persistent pressure**
+- Forecasts i
